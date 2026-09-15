@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#6A2328">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Verba">
+<title>Verba</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bone:#EFE6D4;
+  --gold:#D3B26E;
+  --ease:cubic-bezier(.22,.8,.18,1);
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:#2B1719;
+  transition:background-color .9s ease;
+  display:grid;place-items:center;overflow:hidden;
+  font-family:"Cormorant Garamond",Garamond,"Times New Roman",serif;
+  color:var(--bone);
+  -webkit-tap-highlight-color:transparent;
+  -webkit-user-select:none;user-select:none;
+  overscroll-behavior:none;
+}
+#app{
+  position:relative;
+  height:min(92vh,880px);
+  width:calc(min(92vh,880px) * .5);
+  border-radius:36px;
+  overflow:hidden;
+  isolation:isolate;
+  background:#1d1214;
+  box-shadow:0 50px 90px -40px rgba(0,0,0,.7),0 0 0 1px rgba(239,230,212,.07);
+  container-type:size;
+  touch-action:none;
+  cursor:pointer;
+}
+@media (max-width:640px){
+  #app{width:100vw;height:100vh;height:100dvh;border-radius:0;box-shadow:none}
+}
+#stage{position:absolute;inset:0}
+
+.slide{
+  position:absolute;inset:0;overflow:hidden;
+  background:var(--c);
+  background:radial-gradient(130% 90% at 85% 5%,color-mix(in oklab,var(--c) 88%,#fff 12%) 0%,var(--c) 45%,color-mix(in oklab,var(--c) 55%,#000 45%) 100%);
+  box-shadow:0 0 70px rgba(0,0,0,.45);
+  will-change:transform;
+}
+.art{
+  position:absolute;width:118cqw;height:118cqw;
+  top:-2cqh;right:-38cqw;
+  opacity:.42;
+  -webkit-mask-image:radial-gradient(circle at 55% 45%,#000 42%,transparent 72%);
+  mask-image:radial-gradient(circle at 55% 45%,#000 42%,transparent 72%);
+}
+.art svg{width:100%;height:100%;display:block}
+.veil{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 25%,color-mix(in oklab,var(--c) 45%,#000 55%) 100%);
+}
+.content{position:absolute;left:8cqw;right:9cqw;bottom:28cqh}
+.la{
+  margin:0;font-weight:700;line-height:1.08;letter-spacing:-.005em;
+  text-wrap:balance;
+}
+.la span{
+  display:inline-block;opacity:0;transform:translateY(.4em);filter:blur(8px);
+  animation:rise .8s var(--ease) forwards;
+  animation-delay:calc(var(--i) * 60ms + 160ms);
+}
+.fr{
+  margin:1.1em 0 0;font-style:italic;font-weight:500;
+  font-size:clamp(16px,5.2cqw,22px);line-height:1.42;
+  max-width:36ch;color:color-mix(in oklab,var(--bone) 82%,transparent);
+  opacity:0;animation:fade .9s ease forwards;animation-delay:var(--d);
+  text-wrap:pretty;
+}
+.by{
+  position:absolute;right:8cqw;bottom:calc(6.5cqh + env(safe-area-inset-bottom));
+  text-align:right;max-width:70cqw;
+  opacity:0;animation:fade .9s ease forwards;animation-delay:calc(var(--d) + 200ms);
+}
+.who{display:block;font-family:Cinzel,serif;font-weight:600;font-size:clamp(13px,3.9cqw,16px);letter-spacing:.06em;color:var(--gold)}
+.src,.when{display:block;font-style:italic;font-size:clamp(14px,4cqw,17px);line-height:1.3;color:color-mix(in oklab,var(--bone) 70%,transparent)}
+.when{margin-top:2px}
+
+/* accueil */
+.home .art{width:96cqw;height:96cqw;top:5cqh;right:2cqw;opacity:.92;-webkit-mask-image:none;mask-image:none}
+.home .veil{background:linear-gradient(180deg,transparent 45%,color-mix(in oklab,var(--c) 40%,#000 60%) 100%)}
+.home .content{bottom:17cqh}
+.title{margin:0;font-weight:700;font-size:25cqw;line-height:.9;letter-spacing:-.02em;opacity:0;animation:rise 1.1s var(--ease) .15s forwards}
+.lede{margin:.6em 0 0;font-style:italic;font-size:clamp(17px,5.4cqw,23px);line-height:1.35;max-width:26ch;opacity:0;animation:fade 1s ease .6s forwards}
+.hint{
+  position:absolute;left:8cqw;bottom:calc(7cqh + env(safe-area-inset-bottom));
+  font-size:clamp(14px,4cqw,17px);font-style:italic;color:color-mix(in oklab,var(--bone) 65%,transparent);
+  opacity:0;animation:fade 1s ease 1.1s forwards;
+}
+.edge{
+  position:absolute;right:0;top:50%;width:3px;height:64px;margin-top:-32px;border-radius:3px 0 0 3px;
+  background:var(--gold);opacity:.0;animation:pulse 2.4s ease-in-out 1.4s infinite;
+}
+
+/* chrome */
+.bar{position:absolute;z-index:5;top:calc(16px + env(safe-area-inset-top));left:8cqw;right:8cqw;height:2px;border-radius:2px;background:rgba(239,230,212,.16);transition:opacity .5s}
+.bar i{display:block;height:100%;width:0;border-radius:2px;background:var(--bone);transition:width .6s var(--ease)}
+.idx{position:absolute;z-index:5;top:calc(30px + env(safe-area-inset-top));left:8cqw;font-family:Cinzel,serif;font-size:14px;letter-spacing:.08em;color:var(--gold);transition:opacity .5s}
+.idx small{font-size:11px;opacity:.55;margin-left:.35em}
+.is-home .bar,.is-home .idx{opacity:0}
+
+@keyframes rise{to{opacity:1;transform:none;filter:none}}
+@keyframes fade{to{opacity:1}}
+@keyframes pulse{0%,100%{opacity:0;transform:translateX(3px)}50%{opacity:.8;transform:none}}
+
+@media (prefers-reduced-motion:reduce){
+  .la span,.title{filter:none;transform:none;animation-duration:.01s;animation-delay:0s}
+  .fr,.by,.lede,.hint{animation-duration:.2s;animation-delay:0s}
+  .edge{animation:none;opacity:.5}
+}
+</style>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="description" content="Cinquante et une phrases latines, de Plaute à Newton.">
+</head>
+<body>
+<main id="app" aria-live="polite">
+  <div id="stage"></div>
+  <div class="bar"><i></i></div>
+  <div class="idx"></div>
+</main>
+
+<script>
+/* ---------- Auteurs ---------- */
+const A = {
+  plaute:   {fr:"Plaute", la:"T · MACCIVS · PLAVTVS", c:"#5B3A2A", f:{hair:"bald",beard:"full",collar:"toga"}},
+  terence:  {fr:"Térence", la:"P · TERENTIVS · AFER", c:"#4A4326", f:{hair:"curls",collar:"toga"}},
+  caton:    {fr:"Caton l’Ancien", la:"M · PORCIVS · CATO", c:"#3E3A36", f:{hair:"bald",collar:"toga"}},
+  cicero:   {fr:"Cicéron", la:"M · TVLLIVS · CICERO", c:"#2F4636", f:{hair:"short",collar:"toga"}},
+  lucrece:  {fr:"Lucrèce", la:"T · LVCRETIVS · CARVS", c:"#233F52", f:{hair:"curls",beard:"full",collar:"toga"}},
+  cesar:    {fr:"Jules César", la:"C · IVLIVS · CAESAR", c:"#6A2328", f:{hair:"short",laurel:1,collar:"toga"}},
+  salluste: {fr:"Salluste", la:"C · SALLVSTIVS · CRISPVS", c:"#2D4A4E", f:{hair:"short",collar:"toga"}},
+  virgile:  {fr:"Virgile", la:"P · VERGILIVS · MARO", c:"#28493F", f:{hair:"curls",laurel:1,collar:"toga"}},
+  horace:   {fr:"Horace", la:"Q · HORATIVS · FLACCVS", c:"#4B3560", f:{hair:"curls",collar:"toga"}},
+  titelive: {fr:"Tite-Live", la:"T · LIVIVS · PATAVINVS", c:"#54402B", f:{hair:"short",collar:"toga"}},
+  ovide:    {fr:"Ovide", la:"P · OVIDIVS · NASO", c:"#5E2E45", f:{hair:"curls",laurel:1,collar:"toga"}},
+  auguste:  {fr:"Auguste", la:"IMP · CAESAR · AVGVSTVS", c:"#33305E", f:{hair:"short",laurel:1,collar:"toga"}},
+  caligula: {fr:"Caligula", la:"C · CAESAR · GERMANICVS", c:"#502A3E", f:{hair:"short",laurel:1,collar:"toga"}},
+  seneque:  {fr:"Sénèque", la:"L · ANNAEVS · SENECA", c:"#4F3A24", f:{hair:"bald",beard:"full",collar:"toga"}},
+  neron:    {fr:"Néron", la:"NERO · CLAVDIVS · CAESAR", c:"#6B3022", f:{hair:"curls",laurel:1,beard:"short",collar:"toga"}},
+  vespasien:{fr:"Vespasien", la:"T · FLAVIVS · VESPASIANVS", c:"#3A4A3E", f:{hair:"bald",collar:"toga"}},
+  martial:  {fr:"Martial", la:"M · VALERIVS · MARTIALIS", c:"#37406A", f:{hair:"curls",collar:"toga"}},
+  tacite:   {fr:"Tacite", la:"P · CORNELIVS · TACITVS", c:"#45413A", f:{hair:"short",collar:"toga"}},
+  juvenal:  {fr:"Juvénal", la:"D · IVNIVS · IVVENALIS", c:"#34395A", f:{hair:"short",beard:"short",collar:"toga"}},
+  augustin: {fr:"Augustin d’Hippone", la:"AVRELIVS · AVGVSTINVS", c:"#5A4222", f:{hair:"mitre",beard:"full",collar:"robe"}},
+  erasme:   {fr:"Érasme", la:"DESIDERIVS · ERASMVS", c:"#2E4A43", f:{hair:"cap",collar:"robe"}},
+  bacon:    {fr:"Francis Bacon", la:"FRANCISCVS · BACONVS", c:"#3E3553", f:{hair:"short",beard:"short",mous:1,collar:"ruff"}},
+  descartes:{fr:"René Descartes", la:"RENATVS · CARTESIVS", c:"#263A4F", f:{hair:"wig",mous:1,collar:"band"}},
+  spinoza:  {fr:"Baruch Spinoza", la:"BENEDICTVS · DE · SPINOZA", c:"#43364A", f:{hair:"wig",mous:1,collar:"band"}},
+  newton:   {fr:"Isaac Newton", la:"ISAACVS · NEWTONVS", c:"#2F4555", f:{hair:"wig",collar:"band"}}
+};
+
+/* ---------- Citations (ordre chronologique) ---------- */
+const Q = [
+ ["plaute","Lupus est homo homini, non homo, quom qualis sit non novit.","L’homme est un loup pour l’homme, et non un homme, tant qu’il ne sait pas qui il est.","Asinaria, v. 495","vers 195 av. J.-C."],
+ ["terence","Homo sum, humani nihil a me alienum puto.","Je suis homme, et je pense que rien de ce qui est humain ne m’est étranger.","Heautontimoroumenos, v. 77","163 av. J.-C."],
+ ["caton","Carthago delenda est.","Carthage doit être détruite.","Formule transmise par la tradition, d’après Plutarque, Caton l’Ancien, 27","vers 150 av. J.-C."],
+ ["cicero","Quo usque tandem abutere, Catilina, patientia nostra?","Jusqu’à quand enfin, Catilina, abuseras-tu de notre patience\u202F?","Première Catilinaire, 1","63 av. J.-C."],
+ ["cicero","O tempora, o mores!","Ô temps, ô mœurs\u202F!","Première Catilinaire, 2","63 av. J.-C."],
+ ["cicero","Historia vero testis temporum, lux veritatis, vita memoriae, magistra vitae, nuntia vetustatis.","L’histoire, témoin des temps, lumière de la vérité, vie de la mémoire, maîtresse de vie, messagère du passé.","De l’orateur, II, 36","55 av. J.-C."],
+ ["lucrece","Nullam rem e nilo gigni divinitus umquam.","Jamais rien ne naît de rien par l’effet d’une volonté divine.","De la nature, I, 150","vers 55 av. J.-C."],
+ ["cesar","Gallia est omnis divisa in partes tres.","La Gaule, dans son ensemble, est divisée en trois parties.","Guerre des Gaules, I, 1","vers 52 av. J.-C."],
+ ["cicero","Silent enim leges inter arma.","Car les lois se taisent au milieu des armes.","Pour Milon, 11","52 av. J.-C."],
+ ["cesar","Iacta alea est.","Le sort en est jeté.","Rapporté par Suétone, Vie de César, 32","49 av. J.-C."],
+ ["cesar","Veni, vidi, vici.","Je suis venu, j’ai vu, j’ai vaincu.","Rapporté par Suétone, Vie de César, 37","47 av. J.-C."],
+ ["cicero","Cedant arma togae, concedat laurea laudi.","Que les armes le cèdent à la toge, le laurier à la gloire civique.","Des devoirs, I, 77","44 av. J.-C."],
+ ["salluste","Concordia parvae res crescunt, discordia maximae dilabuntur.","Par la concorde les petits États grandissent, par la discorde les plus grands s’effondrent.","Guerre de Jugurtha, 10, 6","vers 41 av. J.-C."],
+ ["virgile","Omnia vincit amor, et nos cedamus amori.","L’amour triomphe de tout\u202F; nous aussi, cédons à l’amour.","Bucoliques, X, 69","vers 39 av. J.-C."],
+ ["horace","Nunc est bibendum.","C’est maintenant qu’il faut boire.","Odes, I, 37","30 av. J.-C."],
+ ["virgile","Labor omnia vicit improbus.","Un travail acharné est venu à bout de tout.","Géorgiques, I, 145","29 av. J.-C."],
+ ["virgile","Felix qui potuit rerum cognoscere causas.","Heureux celui qui a pu connaître les causes des choses.","Géorgiques, II, 490","29 av. J.-C."],
+ ["virgile","Sed fugit interea, fugit inreparabile tempus.","Mais il fuit pendant ce temps, il fuit, le temps irréparable.","Géorgiques, III, 284","29 av. J.-C."],
+ ["titelive","Vae victis!","Malheur aux vaincus\u202F!","Histoire romaine, V, 48 (mot du chef gaulois Brennus)","vers 27 av. J.-C."],
+ ["horace","Carpe diem, quam minimum credula postero.","Cueille le jour, sans te fier le moins du monde au lendemain.","Odes, I, 11","vers 23 av. J.-C."],
+ ["horace","Dulce et decorum est pro patria mori.","Il est doux et beau de mourir pour la patrie.","Odes, III, 2","vers 23 av. J.-C."],
+ ["horace","Exegi monumentum aere perennius.","J’ai achevé un monument plus durable que l’airain.","Odes, III, 30","vers 23 av. J.-C."],
+ ["horace","Sapere aude.","Ose être sage.","Épîtres, I, 2, 40","vers 20 av. J.-C."],
+ ["virgile","Sunt lacrimae rerum et mentem mortalia tangunt.","Il y a des larmes pour les malheurs, et le sort des mortels touche le cœur.","Énéide, I, 462","19 av. J.-C."],
+ ["virgile","Timeo Danaos et dona ferentes.","Je crains les Grecs, même quand ils apportent des présents.","Énéide, II, 49","19 av. J.-C."],
+ ["virgile","Audentes fortuna iuvat.","La fortune sourit aux audacieux.","Énéide, X, 284","19 av. J.-C."],
+ ["ovide","Video meliora proboque, deteriora sequor.","Je vois le meilleur et je l’approuve, et c’est le pire que je suis.","Métamorphoses, VII, 20","vers 8 apr. J.-C."],
+ ["ovide","Tempus edax rerum.","Temps, dévoreur des choses.","Métamorphoses, XV, 234","vers 8 apr. J.-C."],
+ ["auguste","Quintili Vare, legiones redde!","Quintilius Varus, rends-moi mes légions\u202F!","Rapporté par Suétone, Vie d’Auguste, 23","9 apr. J.-C."],
+ ["ovide","Gutta cavat lapidem.","La goutte d’eau creuse la pierre.","Pontiques, IV, 10, 5","vers 16 apr. J.-C."],
+ ["caligula","Oderint, dum metuant.","Qu’ils me haïssent, pourvu qu’ils me craignent.","Rapporté par Suétone, Vie de Caligula, 30","vers 40 apr. J.-C."],
+ ["seneque","Non est ad astra mollis e terris via.","Il n’est pas de route douce qui mène de la terre aux astres.","Hercule furieux, v. 437","vers 50 apr. J.-C."],
+ ["seneque","Omnia, Lucili, aliena sunt, tempus tantum nostrum est.","Tout, Lucilius, nous est étranger\u202F; le temps seul est à nous.","Lettres à Lucilius, 1, 3","vers 62 apr. J.-C."],
+ ["seneque","Non quia difficilia sunt non audemus, sed quia non audemus difficilia sunt.","Ce n’est pas parce que les choses sont difficiles que nous n’osons pas\u202F; c’est parce que nous n’osons pas qu’elles sont difficiles.","Lettres à Lucilius, 104, 26","vers 64 apr. J.-C."],
+ ["seneque","Non vitae sed scholae discimus.","Nous n’apprenons pas pour la vie, mais pour l’école.","Lettres à Lucilius, 106, 12 (Sénèque le déplore)","vers 64 apr. J.-C."],
+ ["neron","Qualis artifex pereo!","Quel artiste périt avec moi\u202F!","Rapporté par Suétone, Vie de Néron, 49","68 apr. J.-C."],
+ ["vespasien","Vae, puto deus fio.","Hélas, je crois que je deviens dieu.","Rapporté par Suétone, Vie de Vespasien, 23","79 apr. J.-C."],
+ ["martial","Non est vivere, sed valere vita est.","La vie, ce n’est pas de vivre, c’est d’être en bonne santé.","Épigrammes, VI, 70","vers 90 apr. J.-C."],
+ ["tacite","Ubi solitudinem faciunt, pacem appellant.","Où ils font un désert, ils l’appellent la paix.","Vie d’Agricola, 30 (discours de Calgacus)","98 apr. J.-C."],
+ ["juvenal","Rara avis in terris nigroque simillima cycno.","Oiseau rare sur la terre, tout pareil à un cygne noir.","Satires, VI, 165","vers 115 apr. J.-C."],
+ ["juvenal","Quis custodiet ipsos custodes?","Qui gardera les gardiens eux-mêmes\u202F?","Satires, VI","vers 115 apr. J.-C."],
+ ["juvenal","Panem et circenses.","Du pain et les jeux du cirque.","Satires, X, 81","vers 120 apr. J.-C."],
+ ["juvenal","Orandum est ut sit mens sana in corpore sano.","Il faut demander aux dieux un esprit sain dans un corps sain.","Satires, X, 356","vers 120 apr. J.-C."],
+ ["augustin","Inquietum est cor nostrum, donec requiescat in te.","Notre cœur est sans repos, jusqu’à ce qu’il repose en toi.","Confessions, I, 1","vers 397"],
+ ["augustin","Tolle, lege.","Prends, lis.","Confessions, VIII, 12","vers 397"],
+ ["augustin","Dilige, et quod vis fac.","Aime, et fais ce que tu veux.","Commentaire de la première épître de Jean, VII, 8","407"],
+ ["erasme","In regione caecorum rex est luscus.","Au pays des aveugles, le borgne est roi.","Adages, III, 4, 96","1508"],
+ ["bacon","Nam et ipsa scientia potestas est.","Car la science elle-même est pouvoir.","Meditationes sacrae, De haeresibus","1597"],
+ ["descartes","Ego cogito, ergo sum.","Je pense, donc je suis.","Principes de la philosophie, I, 7","1644"],
+ ["spinoza","Sed omnia praeclara tam difficilia quam rara sunt.","Mais tout ce qui est remarquable est aussi difficile que rare.","Éthique, V, proposition 42, scolie","1677"],
+ ["newton","Hypotheses non fingo.","Je ne forge pas d’hypothèses.","Principia, Scholie général","1713"]
+];
+
+/* ---------- Médaille gravée (SVG) ---------- */
+let uid = 0;
+function medal(a){
+  const id = "m" + (uid++), f = a.f;
+  const G = "#F1E4C4", H = "#8B6A34", L = "#3B2A12";
+  let hair = "", extra = "", beard = "", collar = "";
+
+  const curl = (x,y,r,o=.9) => `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r}" fill="${H}" fill-opacity="${o}" stroke="${L}" stroke-opacity=".45" stroke-width="2"/>`;
+
+  if (f.hair === "curls" || f.hair === "wig") {
+    for (let r = 22; r <= 98; r += 15) for (let t = 150; t <= 300; t += 150 / (r / 7)) {
+      const k = t * Math.PI / 180; hair += curl(192 + r * Math.cos(k), 172 + r * Math.sin(k), 10);
+    }
+  }
+  if (f.hair === "wig") {
+    for (let y = 210; y <= 480; y += 20) for (let x = 92; x <= 196 - (y - 210) * .12; x += 22)
+      hair += curl(x + (y % 40 ? 11 : 0), y, 13, .85);
+  }
+  if (f.hair === "short") {
+    hair += `<path d="M112,210 C100,140 150,86 215,90 C262,92 292,120 296,150 C270,132 240,128 215,140 C180,130 140,160 112,210Z" fill="${H}" fill-opacity=".75"/>`;
+    for (let i = 0; i < 9; i++) { const x = 130 + i * 18; hair += `<path d="M${x},${150 - i * 4} q10,-14 22,-6" fill="none" stroke="${L}" stroke-opacity=".5" stroke-width="2.4"/>`; }
+  }
+  if (f.hair === "bald") {
+    extra += `<path d="M262,150 q24,-6 40,6 M258,166 q26,-5 44,5" fill="none" stroke="${L}" stroke-opacity=".35" stroke-width="2"/>`;
+    hair += `<path d="M104,250 C100,215 112,190 130,176 C150,196 152,230 148,262Z" fill="${H}" fill-opacity=".6"/>`;
+  }
+  if (f.hair === "cap") {
+    hair += `<path d="M102,182 C92,98 172,56 250,62 C300,66 322,108 314,150 C258,132 168,140 102,182Z" fill="#2A2018" fill-opacity=".9"/>`;
+    hair += `<path d="M100,190 C92,260 104,330 140,400 L110,480 L60,480 C70,380 70,260 100,190Z" fill="#2A2018" fill-opacity=".75"/>`;
+  }
+  if (f.hair === "mitre") {
+    hair += `<path d="M126,176 L170,34 L212,92 L252,34 L300,160 C240,138 180,146 126,176Z" fill="${H}" fill-opacity=".9" stroke="${L}" stroke-opacity=".5" stroke-width="2"/>`;
+    hair += `<path d="M212,92 L214,150 M160,110 L262,100" stroke="${G}" stroke-opacity=".7" stroke-width="5" fill="none"/>`;
+  }
+  if (f.laurel) {
+    for (let t = 148; t <= 318; t += 11) {
+      const k = t * Math.PI / 180, x = 200 + 110 * Math.cos(k), y = 186 + 110 * Math.sin(k);
+      extra += `<ellipse cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" rx="17" ry="6" transform="rotate(${t + 62} ${x.toFixed(1)} ${y.toFixed(1)})" fill="#B8923F" stroke="${L}" stroke-opacity=".5" stroke-width="1.6"/>`;
+      extra += `<ellipse cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" rx="17" ry="6" transform="rotate(${t + 118} ${x.toFixed(1)} ${y.toFixed(1)})" fill="#9C7A30" stroke="${L}" stroke-opacity=".5" stroke-width="1.6"/>`;
+    }
+    extra += `<path d="M104,232 C92,270 110,290 96,330 M112,236 C112,272 128,286 122,320" fill="none" stroke="#B8923F" stroke-width="5" stroke-linecap="round"/>`;
+  }
+  if (f.beard === "full") {
+    beard += `<path d="M210,276 C212,336 242,386 292,388 C322,389 338,368 332,338 L324,314 C316,326 304,332 294,334 C276,334 258,318 246,300 C236,288 224,282 210,276Z" fill="${H}" fill-opacity=".85"/>`;
+    for (let i = 0; i < 7; i++) beard += `<path d="M${232 + i * 13},${320 + (i % 2) * 14} q6,18 -2,32" fill="none" stroke="${L}" stroke-opacity=".45" stroke-width="2.2"/>`;
+  }
+  if (f.beard === "short") {
+    beard += `<path d="M222,292 C230,334 256,366 296,368 C314,368 326,356 324,334 C312,344 300,348 290,346 C270,342 246,318 222,292Z" fill="${H}" fill-opacity=".7"/>`;
+  }
+  if (f.mous) beard += `<path d="M298,290 C306,280 320,280 326,286 C320,294 306,296 298,290Z" fill="${H}"/>`;
+
+  if (f.collar === "toga") {
+    collar = `<path d="M40,500 C70,440 130,418 180,424 L262,424 C310,430 350,460 380,500Z" fill="url(#g${id})"/>
+      <path d="M140,444 C200,474 262,470 336,466 M110,478 C190,506 290,496 356,490 M184,426 C224,462 252,488 262,500 M240,426 C270,450 300,470 320,500" fill="none" stroke="${L}" stroke-opacity=".45" stroke-width="2.4"/>`;
+  }
+  if (f.collar === "robe") {
+    collar = `<path d="M30,500 C60,436 130,410 182,416 L270,416 C320,424 360,458 390,500Z" fill="${H}" fill-opacity=".85"/>
+      <path d="M150,430 L130,500 M200,420 L190,500 M250,420 L262,500 M300,432 L330,500" stroke="${L}" stroke-opacity=".4" stroke-width="2.2"/>`;
+  }
+  if (f.collar === "ruff") {
+    for (let row = 0; row < 2; row++) for (let x = 120; x <= 330; x += 19)
+      collar += curl(x + row * 9, 424 + row * 18, 13, 1).replace(H, G);
+    collar = `<path d="M40,500 C80,452 140,440 200,440 L270,440 C320,446 360,468 380,500Z" fill="#2A2018" fill-opacity=".85"/>` + collar;
+  }
+  if (f.collar === "band") {
+    collar = `<path d="M40,500 C80,446 140,428 196,430 L276,430 C326,436 362,466 384,500Z" fill="#2A2018" fill-opacity=".85"/>
+      <path d="M232,430 L300,430 L292,478 L240,478Z" fill="${G}" fill-opacity=".9"/>`;
+  }
+
+  const dots = Array.from({length: 72}, (_, i) => {
+    const k = i / 72 * Math.PI * 2; return `<circle cx="${(250 + 212 * Math.cos(k)).toFixed(1)}" cy="${(250 + 212 * Math.sin(k)).toFixed(1)}" r="1.6" fill="#D3B26E" fill-opacity=".55"/>`;
+  }).join("");
+
+  return `<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <clipPath id="c${id}"><circle cx="250" cy="250" r="200"/></clipPath>
+    <radialGradient id="g${id}" cx="68%" cy="36%" r="75%">
+      <stop offset="0" stop-color="${G}" stop-opacity=".96"/><stop offset=".55" stop-color="#CBA762" stop-opacity=".62"/><stop offset="1" stop-color="#6E5326" stop-opacity=".4"/>
+    </radialGradient>
+    <path id="p${id}" d="M28,250 A222,222 0 1,1 472,250 A222,222 0 1,1 28,250"/>
+  </defs>
+  <circle cx="250" cy="250" r="240" fill="none" stroke="#D3B26E" stroke-opacity=".45" stroke-width="2"/>
+  <circle cx="250" cy="250" r="201" fill="#D3B26E" fill-opacity=".05" stroke="#D3B26E" stroke-opacity=".5" stroke-width="1.5"/>
+  ${dots}
+  <text font-family="Cinzel,serif" font-weight="600" font-size="21" letter-spacing="5" fill="#E0C68D" text-anchor="middle"><textPath href="#p${id}" startOffset="25%">${a.la}</textPath></text>
+  <g clip-path="url(#c${id})"><g transform="translate(14,20)">
+    <path d="M200,88 C260,86 300,120 306,170 C308,185 306,195 312,205 L318,212 C320,222 318,228 322,238 L338,268 C340,274 336,278 328,278 L322,282 C326,288 326,292 322,296 C326,300 326,306 320,310 C316,318 318,326 320,334 C322,350 312,360 296,362 C280,364 266,360 256,356 L262,420 C265,440 272,460 290,480 L110,480 C130,450 140,420 138,390 C120,370 104,330 102,280 C100,200 130,90 200,88Z" fill="url(#g${id})"/>
+    <path d="M232,318 C250,346 272,358 296,362 M322,272 q-7,4 -2,9 M322,297 l-12,2" fill="none" stroke="${L}" stroke-opacity=".45" stroke-width="2.2"/>
+    <path d="M280,204 Q298,196 316,208" fill="none" stroke="${L}" stroke-opacity=".55" stroke-width="2.6"/>
+    <path d="M284,222 Q295,215 306,223 Q295,228 284,222Z" fill="${L}" fill-opacity=".5"/>
+    <path d="M212,232 C194,236 192,272 214,282 C224,272 224,244 212,232Z M210,246 q-8,10 2,22" fill="none" stroke="${L}" stroke-opacity=".5" stroke-width="2.2"/>
+    ${collar}${hair}${beard}${extra}
+  </g></g>
+</svg>`;
+}
+
+/* ---------- Utilitaires ---------- */
+const roman = n => { const v=[[1000,"M"],[900,"CM"],[500,"D"],[400,"CD"],[100,"C"],[90,"XC"],[50,"L"],[40,"XL"],[10,"X"],[9,"IX"],[5,"V"],[4,"IV"],[1,"I"]]; let s=""; for (const [x,r] of v) while (n>=x){s+=r;n-=x} return s; };
+const shade = (hex, k) => { const n=parseInt(hex.slice(1),16); const c=[n>>16,(n>>8)&255,n&255].map(x=>Math.round(x*k)); return "#"+c.map(x=>x.toString(16).padStart(2,"0")).join(""); };
+const TOTAL = Q.length;
+
+const app = document.getElementById("app");
+const stage = document.getElementById("stage");
+const barFill = document.querySelector(".bar i");
+const idxEl = document.querySelector(".idx");
+const meta = document.querySelector('meta[name="theme-color"]');
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+function build(i){
+  const s = document.createElement("section");
+  if (i === 0) {
+    const a = A.cesar;
+    s.className = "slide home";
+    s.style.setProperty("--c", a.c);
+    s.innerHTML = `<div class="art">${medal(a)}</div><div class="veil"></div>
+      <div class="content"><h1 class="title">Verba</h1>
+      <p class="lede">Cinquante et une phrases latines, de Plaute à Newton.</p></div>
+      <p class="hint">Touchez la droite de l’image pour commencer</p>
+      <span class="edge"></span>`;
+    s.setAttribute("aria-label", "Accueil");
+    return s;
+  }
+  const [k, la, fr, src, when] = Q[i - 1], a = A[k];
+  const words = la.split(" ");
+  const len = la.length;
+  const size = len < 22 ? 12.5 : len < 42 ? 10 : len < 64 ? 8.4 : 7;
+  s.className = "slide";
+  s.style.setProperty("--c", a.c);
+  s.style.setProperty("--d", (words.length * 60 + 420) + "ms");
+  s.innerHTML = `<div class="art">${medal(a)}</div><div class="veil"></div>
+    <div class="content">
+      <p class="la" lang="la" style="font-size:${size}cqw">${words.map((w, j) => `<span style="--i:${j}">${w}</span>`).join(" ")}</p>
+      <p class="fr">${fr}</p>
+    </div>
+    <footer class="by"><span class="who">${a.fr}</span><span class="src">${src}</span><span class="when">${when}</span></footer>`;
+  return s;
+}
+
+let index = 0;
+try { const v = parseInt(localStorage.getItem("verba-index"), 10); if (v >= 0 && v <= TOTAL) index = v; } catch (e) {}
+let cur = build(index);
+stage.appendChild(cur);
+let running = [];
+
+function chrome(){
+  const c = index === 0 ? A.cesar.c : A[Q[index - 1][0]].c;
+  document.body.style.backgroundColor = shade(c, .55);
+  meta.setAttribute("content", c);
+  app.classList.toggle("is-home", index === 0);
+  barFill.style.width = (index / TOTAL * 100) + "%";
+  idxEl.innerHTML = index ? `${roman(index)}<small>/ ${roman(TOTAL)}</small>` : "";
+  try { localStorage.setItem("verba-index", index); } catch (e) {}
+}
+chrome();
+
+function go(target, dir, fromDx = 0){
+  running.forEach(an => an.finish());
+  running = [];
+  const old = cur, nw = build(target);
+  stage.appendChild(nw);
+  const opt = {duration: reduce ? 1 : 640, easing: "cubic-bezier(.22,.8,.18,1)", fill: "forwards"};
+  const a1 = old.animate([
+    {transform: `translateX(${fromDx}px)`, filter: "brightness(1)"},
+    {transform: `translateX(${-dir * 28}%) scale(.9)`, filter: "brightness(.4)"}
+  ], opt);
+  const a2 = nw.animate([
+    {transform: `translateX(calc(${dir * 100}% + ${fromDx}px))`},
+    {transform: "translateX(0)"}
+  ], opt);
+  a1.onfinish = () => old.remove();
+  a2.onfinish = () => { a2.cancel(); nw.style.transform = ""; };
+  running = [a1, a2];
+  cur = nw; index = target; chrome();
+}
+const next = (dx = 0) => go(index >= TOTAL ? 0 : index + 1, 1, dx);
+const prev = (dx = 0) => { if (index === 0) return bounce(); go(index - 1, -1, dx); };
+function bounce(){
+  cur.animate([{transform:"translateX(0)"},{transform:"translateX(14px)"},{transform:"translateX(0)"}],{duration:380,easing:"ease-out"});
+}
+
+/* ---------- Gestes ---------- */
+let sx = 0, t0 = 0, dx = 0, down = false;
+app.addEventListener("pointerdown", e => {
+  down = true; sx = e.clientX; t0 = performance.now(); dx = 0;
+  app.setPointerCapture(e.pointerId);
+});
+app.addEventListener("pointermove", e => {
+  if (!down) return;
+  dx = e.clientX - sx;
+  if (index === 0 && dx > 0) dx *= .25;
+  if (Math.abs(dx) > 6 && !running.some(a => a.playState === "running"))
+    cur.style.transform = `translateX(${dx}px) scale(${1 - Math.min(Math.abs(dx) / app.clientWidth, 1) * .05})`;
+});
+app.addEventListener("pointerup", e => {
+  if (!down) return; down = false;
+  const dt = performance.now() - t0, w = app.clientWidth;
+  if (Math.abs(dx) < 8) {
+    cur.style.transform = "";
+    const r = app.getBoundingClientRect();
+    (e.clientX - r.left) > r.width / 2 ? next() : prev();
+  } else if (Math.abs(dx) > w * .18 || Math.abs(dx) / dt > .55) {
+    const d = dx; cur.style.transform = "";
+    d < 0 ? next(d) : prev(d);
+  } else {
+    const from = cur.style.transform; cur.style.transform = "";
+    cur.animate([{transform: from}, {transform: "none"}], {duration: 420, easing: "cubic-bezier(.22,.8,.18,1)"});
+  }
+});
+app.addEventListener("pointercancel", () => { down = false; cur.style.transform = ""; });
+
+addEventListener("keydown", e => {
+  if (e.key === "ArrowRight" || e.key === " " || e.key === "Enter") { e.preventDefault(); next(); }
+  if (e.key === "ArrowLeft") { e.preventDefault(); prev(); }
+});
+
+/* ---------- Service worker ---------- */
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
+  addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+}
+</script>
+</body>
+</html>
