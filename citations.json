@@ -1,0 +1,502 @@
+[
+  {
+    "id": 1,
+    "author": "Térence",
+    "latin": "Homo sum, humani nihil a me alienum puto.",
+    "french": "Je suis homme, et je pense que rien de ce qui est humain ne m’est étranger.",
+    "work": "Heautontimorumenos, v. 77",
+    "date": "163 av. J.-C.",
+    "image": "terence.webp",
+    "source_note": "Térence, Heautontimorumenos (L’Homme qui se punit lui-même), acte I, scène 1, v. 77 : réplique de Chrémès."
+  },
+  {
+    "id": 2,
+    "author": "Térence",
+    "latin": "Quot homines, tot sententiae.",
+    "french": "Autant d’hommes, autant d’avis.",
+    "work": "Phormio, v. 454",
+    "date": "161 av. J.-C.",
+    "image": "terence.webp",
+    "source_note": "Térence, Phormion, acte II, scène 4, v. 454."
+  },
+  {
+    "id": 3,
+    "author": "Cicéron",
+    "latin": "Quo usque tandem abutere, Catilina, patientia nostra?",
+    "french": "Jusqu’à quand enfin, Catilina, abuseras-tu de notre patience ?",
+    "work": "In Catilinam, I, 1",
+    "date": "63 av. J.-C.",
+    "image": "cicero.webp",
+    "source_note": "Cicéron, Première Catilinaire, I, 1 : discours prononcé devant le Sénat le 8 novembre 63 av. J.-C."
+  },
+  {
+    "id": 4,
+    "author": "Cicéron",
+    "latin": "O tempora, o mores!",
+    "french": "Ô temps, ô mœurs !",
+    "work": "In Catilinam, I, 2",
+    "date": "63 av. J.-C.",
+    "image": "cicero.webp",
+    "source_note": "Cicéron, Première Catilinaire, I, 2."
+  },
+  {
+    "id": 5,
+    "author": "Jules César",
+    "latin": "Gallia est omnis divisa in partes tres.",
+    "french": "La Gaule, dans son ensemble, est divisée en trois parties.",
+    "work": "De Bello Gallico, I, 1",
+    "date": "58 av. J.-C.",
+    "image": "caesar.webp",
+    "source_note": "César, Guerre des Gaules, I, 1 : ouverture du récit de la campagne de 58 av. J.-C."
+  },
+  {
+    "id": 6,
+    "author": "Jules César",
+    "latin": "Fere libenter homines id quod volunt credunt.",
+    "french": "En général, les hommes croient volontiers ce qu’ils désirent.",
+    "work": "De Bello Gallico, III, 18",
+    "date": "56 av. J.-C.",
+    "image": "caesar.webp",
+    "source_note": "César, Guerre des Gaules, III, 18 : campagne de 56 av. J.-C."
+  },
+  {
+    "id": 7,
+    "author": "Cicéron",
+    "latin": "Historia vero testis temporum, lux veritatis…",
+    "french": "L’histoire, témoin des temps, lumière de la vérité…",
+    "work": "De Oratore, II, 36",
+    "date": "55 av. J.-C.",
+    "image": "cicero.webp",
+    "source_note": "Cicéron, De l’orateur, II, 9, 36. La phrase se poursuit : « vita memoriae, magistra vitae, nuntia vetustatis »."
+  },
+  {
+    "id": 8,
+    "author": "Cicéron",
+    "latin": "Silent enim leges inter arma.",
+    "french": "Car les lois se taisent au milieu des armes.",
+    "work": "Pro Milone, 11",
+    "date": "52 av. J.-C.",
+    "image": "cicero.webp",
+    "source_note": "Cicéron, Pour Milon, IV, 11."
+  },
+  {
+    "id": 9,
+    "author": "Cicéron",
+    "latin": "Salus populi suprema lex esto.",
+    "french": "Que le salut du peuple soit la loi suprême.",
+    "work": "De Legibus, III, 8",
+    "date": "vers 52 av. J.-C.",
+    "image": "cicero.webp",
+    "source_note": "Cicéron, Des lois, III, 3, 8 : formule d’une loi attribuée aux consuls."
+  },
+  {
+    "id": 10,
+    "author": "Jules César",
+    "latin": "Iacta alea est.",
+    "french": "Le sort en est jeté.",
+    "work": "Passage du Rubicon",
+    "date": "49 av. J.-C.",
+    "image": "caesar.webp",
+    "source_note": "Suétone, Vie des douze Césars, Divus Iulius, 32."
+  },
+  {
+    "id": 11,
+    "author": "Jules César",
+    "latin": "Veni, vidi, vici.",
+    "french": "Je suis venu, j’ai vu, j’ai vaincu.",
+    "work": "Triomphe du Pont",
+    "date": "47 av. J.-C.",
+    "image": "caesar.webp",
+    "source_note": "Suétone, Vie des douze Césars, Divus Iulius, 37 : inscription portée lors du triomphe célébrant la victoire de Zéla (47 av. J.-C.)."
+  },
+  {
+    "id": 12,
+    "author": "Cicéron",
+    "latin": "Nihil est tam incredibile quod non dicendo fiat probabile.",
+    "french": "Rien n’est si incroyable que la parole ne puisse le rendre vraisemblable.",
+    "work": "Paradoxa Stoicorum, 3",
+    "date": "46 av. J.-C.",
+    "image": "cicero.webp",
+    "source_note": "Cicéron, Paradoxes des stoïciens, préambule, 3."
+  },
+  {
+    "id": 13,
+    "author": "Cicéron",
+    "latin": "Cedant arma togae, concedat laurea laudi.",
+    "french": "Que les armes le cèdent à la toge, le laurier à la gloire civique.",
+    "work": "De Officiis, I, 77",
+    "date": "44 av. J.-C.",
+    "image": "cicero.webp",
+    "source_note": "Cicéron, Des devoirs, I, 22, 77 : vers tiré de son propre poème sur son consulat."
+  },
+  {
+    "id": 14,
+    "author": "Virgile",
+    "latin": "Omnia vincit amor, et nos cedamus amori.",
+    "french": "L’amour triomphe de tout ; nous aussi, cédons à l’amour.",
+    "work": "Bucolica, X, 69",
+    "date": "vers 39 av. J.-C.",
+    "image": "virgil.webp",
+    "source_note": "Virgile, Bucoliques, X, 69 : paroles du poète Gallus."
+  },
+  {
+    "id": 15,
+    "author": "Virgile",
+    "latin": "Labor omnia vicit improbus.",
+    "french": "Un travail acharné est venu à bout de tout.",
+    "work": "Georgica, I, 145",
+    "date": "29 av. J.-C.",
+    "image": "virgil.webp",
+    "source_note": "Virgile, Géorgiques, I, 145-146."
+  },
+  {
+    "id": 16,
+    "author": "Virgile",
+    "latin": "Felix qui potuit rerum cognoscere causas.",
+    "french": "Heureux celui qui a pu connaître les causes des choses.",
+    "work": "Georgica, II, 490",
+    "date": "29 av. J.-C.",
+    "image": "virgil.webp",
+    "source_note": "Virgile, Géorgiques, II, 490."
+  },
+  {
+    "id": 17,
+    "author": "Virgile",
+    "latin": "Sed fugit interea, fugit inreparabile tempus.",
+    "french": "Mais il fuit pendant ce temps, il fuit, le temps irréparable.",
+    "work": "Georgica, III, 284",
+    "date": "29 av. J.-C.",
+    "image": "virgil.webp",
+    "source_note": "Virgile, Géorgiques, III, 284."
+  },
+  {
+    "id": 18,
+    "author": "Virgile",
+    "latin": "Sunt lacrimae rerum et mentem mortalia tangunt.",
+    "french": "Il y a des larmes pour les malheurs, et le sort des mortels touche le cœur.",
+    "work": "Aeneis, I, 462",
+    "date": "19 av. J.-C.",
+    "image": "virgil.webp",
+    "source_note": "Virgile, Énéide, I, 462 : paroles d’Énée devant les peintures du temple de Carthage."
+  },
+  {
+    "id": 19,
+    "author": "Virgile",
+    "latin": "Timeo Danaos et dona ferentes.",
+    "french": "Je crains les Grecs, même quand ils apportent des présents.",
+    "work": "Aeneis, II, 49",
+    "date": "19 av. J.-C.",
+    "image": "virgil.webp",
+    "source_note": "Virgile, Énéide, II, 49 : paroles de Laocoon devant le cheval de Troie."
+  },
+  {
+    "id": 20,
+    "author": "Virgile",
+    "latin": "Possunt, quia posse videntur.",
+    "french": "Ils peuvent, parce qu’ils croient pouvoir.",
+    "work": "Aeneis, V, 231",
+    "date": "19 av. J.-C.",
+    "image": "virgil.webp",
+    "source_note": "Virgile, Énéide, V, 231 : les rameurs pendant la course de navires."
+  },
+  {
+    "id": 21,
+    "author": "Virgile",
+    "latin": "Audentes fortuna iuvat.",
+    "french": "La fortune sourit aux audacieux.",
+    "work": "Aeneis, X, 284",
+    "date": "19 av. J.-C.",
+    "image": "virgil.webp",
+    "source_note": "Virgile, Énéide, X, 284 : paroles de Turnus."
+  },
+  {
+    "id": 22,
+    "author": "Auguste",
+    "latin": "Quintili Vare, legiones redde!",
+    "french": "Quintilius Varus, rends-moi mes légions !",
+    "work": "Désastre de Varus",
+    "date": "9 apr. J.-C.",
+    "image": "augustus.webp",
+    "source_note": "Suétone, Vie des douze Césars, Divus Augustus, 23 : après la défaite de Teutobourg."
+  },
+  {
+    "id": 23,
+    "author": "Tibère",
+    "latin": "Boni pastoris esse tondere pecus, non deglubere.",
+    "french": "Le propre d’un bon berger est de tondre son troupeau, non de l’écorcher.",
+    "work": "Réponse aux gouverneurs",
+    "date": "entre 14 et 37 apr. J.-C.",
+    "image": "tiberius.webp",
+    "source_note": "Suétone, Vie des douze Césars, Tiberius, 32 : réponse aux gouverneurs qui proposaient d’alourdir l’impôt des provinces."
+  },
+  {
+    "id": 24,
+    "author": "Caligula",
+    "latin": "Oderint, dum metuant.",
+    "french": "Qu’ils me haïssent, pourvu qu’ils me craignent.",
+    "work": "Mot favori de l’empereur",
+    "date": "entre 37 et 41 apr. J.-C.",
+    "image": "caligula.webp",
+    "source_note": "Suétone, Vie des douze Césars, Caligula, 30 : vers de la tragédie Atrée du poète Accius, que l’empereur répétait souvent."
+  },
+  {
+    "id": 25,
+    "author": "Sénèque",
+    "latin": "Vita, si uti scias, longa est.",
+    "french": "La vie, si l’on sait s’en servir, est longue.",
+    "work": "De Brevitate Vitae, 2",
+    "date": "vers 49 apr. J.-C.",
+    "image": "seneca.webp",
+    "source_note": "Sénèque, De la brièveté de la vie, 2, 1."
+  },
+  {
+    "id": 26,
+    "author": "Néron",
+    "latin": "Quam vellem nescire litteras!",
+    "french": "Comme je voudrais ne pas savoir écrire !",
+    "work": "Début du règne",
+    "date": "vers 55 apr. J.-C.",
+    "image": "nero.webp",
+    "source_note": "Suétone, Vie des douze Césars, Nero, 10 : au moment de signer une condamnation à mort."
+  },
+  {
+    "id": 27,
+    "author": "Sénèque",
+    "latin": "Omnia, Lucili, aliena sunt, tempus tantum nostrum est.",
+    "french": "Tout, Lucilius, nous est étranger ; le temps seul est à nous.",
+    "work": "Epistulae ad Lucilium, 1, 3",
+    "date": "vers 62 apr. J.-C.",
+    "image": "seneca.webp",
+    "source_note": "Sénèque, Lettres à Lucilius, 1, 3."
+  },
+  {
+    "id": 28,
+    "author": "Sénèque",
+    "latin": "Homines, dum docent, discunt.",
+    "french": "Les hommes, en enseignant, apprennent.",
+    "work": "Epistulae ad Lucilium, 7, 8",
+    "date": "vers 62 apr. J.-C.",
+    "image": "seneca.webp",
+    "source_note": "Sénèque, Lettres à Lucilius, 7, 8."
+  },
+  {
+    "id": 29,
+    "author": "Sénèque",
+    "latin": "Non quia difficilia sunt non audemus, sed quia non audemus difficilia sunt.",
+    "french": "Ce n’est pas parce que les choses sont difficiles que nous n’osons pas ; c’est parce que nous n’osons pas qu’elles sont difficiles.",
+    "work": "Epistulae ad Lucilium, 104, 26",
+    "date": "vers 64 apr. J.-C.",
+    "image": "seneca.webp",
+    "source_note": "Sénèque, Lettres à Lucilius, 104, 26."
+  },
+  {
+    "id": 30,
+    "author": "Sénèque",
+    "latin": "Non vitae sed scholae discimus.",
+    "french": "Nous n’apprenons pas pour la vie, mais pour l’école.",
+    "work": "Epistulae ad Lucilium, 106, 12",
+    "date": "vers 64 apr. J.-C.",
+    "image": "seneca.webp",
+    "source_note": "Sénèque, Lettres à Lucilius, 106, 12 : Sénèque déplore cet état de fait."
+  },
+  {
+    "id": 31,
+    "author": "Sénèque",
+    "latin": "Ducunt volentem fata, nolentem trahunt.",
+    "french": "Les destins conduisent qui consent, et traînent qui résiste.",
+    "work": "Epistulae ad Lucilium, 107, 11",
+    "date": "vers 64 apr. J.-C.",
+    "image": "seneca.webp",
+    "source_note": "Sénèque, Lettres à Lucilius, 107, 11 : traduction latine par Sénèque d’un hymne du stoïcien Cléanthe."
+  },
+  {
+    "id": 32,
+    "author": "Néron",
+    "latin": "Qualis artifex pereo!",
+    "french": "Quel artiste périt avec moi !",
+    "work": "Derniers mots",
+    "date": "68 apr. J.-C.",
+    "image": "nero.webp",
+    "source_note": "Suétone, Vie des douze Césars, Nero, 49."
+  },
+  {
+    "id": 33,
+    "author": "Vespasien",
+    "latin": "Vae, puto deus fio.",
+    "french": "Hélas, je crois que je deviens dieu.",
+    "work": "Derniers jours",
+    "date": "79 apr. J.-C.",
+    "image": "vespasian.webp",
+    "source_note": "Suétone, Vie des douze Césars, Divus Vespasianus, 23 : plaisanterie de l’empereur mourant, allusion à l’apothéose."
+  },
+  {
+    "id": 34,
+    "author": "Trajan",
+    "latin": "Conquirendi non sunt; si deferantur et arguantur, puniendi sunt.",
+    "french": "Il ne faut pas les rechercher ; s’ils sont dénoncés et convaincus, il faut les punir.",
+    "work": "Rescrit à Pline le Jeune",
+    "date": "vers 112 apr. J.-C.",
+    "image": "trajan.webp",
+    "source_note": "Pline le Jeune, Lettres, X, 97 : réponse de Trajan au sujet des chrétiens de Bithynie."
+  },
+  {
+    "id": 35,
+    "author": "Augustin d’Hippone",
+    "latin": "Inquietum est cor nostrum, donec requiescat in te.",
+    "french": "Notre cœur est sans repos, jusqu’à ce qu’il repose en toi.",
+    "work": "Confessiones, I, 1",
+    "date": "vers 397",
+    "image": "augustine.webp",
+    "source_note": "Augustin, Confessions, I, 1, 1."
+  },
+  {
+    "id": 36,
+    "author": "Augustin d’Hippone",
+    "latin": "Da mihi castitatem et continentiam, sed noli modo.",
+    "french": "Donne-moi la chasteté et la continence, mais pas tout de suite.",
+    "work": "Confessiones, VIII, 7",
+    "date": "vers 397",
+    "image": "augustine.webp",
+    "source_note": "Augustin, Confessions, VIII, 7, 17 : prière de sa jeunesse, rapportée par Augustin."
+  },
+  {
+    "id": 37,
+    "author": "Augustin d’Hippone",
+    "latin": "Dilige, et quod vis fac.",
+    "french": "Aime, et fais ce que tu veux.",
+    "work": "In Epistulam Ioannis, VII, 8",
+    "date": "407",
+    "image": "augustine.webp",
+    "source_note": "Augustin, Commentaire de la première épître de saint Jean, traité VII, 8."
+  },
+  {
+    "id": 38,
+    "author": "Érasme",
+    "latin": "In regione caecorum rex est luscus.",
+    "french": "Au pays des aveugles, le borgne est roi.",
+    "work": "Adagia, III, 4, 96",
+    "date": "1508",
+    "image": "erasmus.webp",
+    "source_note": "Érasme, Adages, III, 4, 96."
+  },
+  {
+    "id": 39,
+    "author": "Martin Luther",
+    "latin": "Esto peccator et pecca fortiter, sed fortius fide et gaude in Christo.",
+    "french": "Sois pécheur et pèche fortement, mais crois et réjouis-toi dans le Christ plus fortement encore.",
+    "work": "Lettre à Melanchthon",
+    "date": "1521",
+    "image": "luther.webp",
+    "source_note": "Luther, lettre à Philipp Melanchthon du 1er août 1521, écrite depuis la Wartbourg."
+  },
+  {
+    "id": 40,
+    "author": "Nicolas Copernic",
+    "latin": "Mathemata mathematicis scribuntur.",
+    "french": "Les mathématiques s’écrivent pour les mathématiciens.",
+    "work": "De Revolutionibus, préface",
+    "date": "1543",
+    "image": "copernicus.webp",
+    "source_note": "Copernic, Des révolutions des orbes célestes, préface dédiée au pape Paul III."
+  },
+  {
+    "id": 41,
+    "author": "Francis Bacon",
+    "latin": "Nam et ipsa scientia potestas est.",
+    "french": "Car la science elle-même est pouvoir.",
+    "work": "Meditationes Sacrae, De Haeresibus",
+    "date": "1597",
+    "image": "bacon.webp",
+    "source_note": "Francis Bacon, Meditationes Sacrae, chapitre « De Haeresibus »."
+  },
+  {
+    "id": 42,
+    "author": "René Descartes",
+    "latin": "Larvatus prodeo.",
+    "french": "Je m’avance masqué.",
+    "work": "Cogitationes privatae",
+    "date": "1619",
+    "image": "descartes.webp",
+    "source_note": "Descartes, Cogitationes privatae, notes de jeunesse connues par la copie qu’en fit Leibniz."
+  },
+  {
+    "id": 43,
+    "author": "Thomas Hobbes",
+    "latin": "Homo homini Deus, et homo homini lupus.",
+    "french": "L’homme est un dieu pour l’homme, et l’homme est un loup pour l’homme.",
+    "work": "De Cive, épître dédicatoire",
+    "date": "1642",
+    "image": "hobbes.webp",
+    "source_note": "Hobbes, Du citoyen, épître dédicatoire au comte de Devonshire."
+  },
+  {
+    "id": 44,
+    "author": "René Descartes",
+    "latin": "Ego cogito, ergo sum.",
+    "french": "Je pense, donc je suis.",
+    "work": "Principia Philosophiae, I, 7",
+    "date": "1644",
+    "image": "descartes.webp",
+    "source_note": "Descartes, Principes de la philosophie, I, 7 ; la formule française figure dans le Discours de la méthode (1637)."
+  },
+  {
+    "id": 45,
+    "author": "Isaac Newton",
+    "latin": "Amicus Plato, amicus Aristoteles, magis amica veritas.",
+    "french": "Platon est mon ami, Aristote est mon ami, mais la vérité est une amie plus chère.",
+    "work": "Quaestiones quaedam philosophicae",
+    "date": "vers 1664",
+    "image": "newton.webp",
+    "source_note": "Newton, carnet d’étudiant Quaestiones quaedam philosophicae (Cambridge University Library, MS Add. 3996)."
+  },
+  {
+    "id": 46,
+    "author": "Baruch Spinoza",
+    "latin": "Non ridere, non lugere, neque detestari, sed intelligere.",
+    "french": "Ne pas rire, ne pas pleurer, ne pas détester, mais comprendre.",
+    "work": "Tractatus Politicus, I, 4",
+    "date": "1677",
+    "image": "spinoza.webp",
+    "source_note": "Spinoza, Traité politique, I, 4, à propos des actions humaines ; œuvre posthume."
+  },
+  {
+    "id": 47,
+    "author": "Baruch Spinoza",
+    "latin": "Deus, seu Natura.",
+    "french": "Dieu, c’est-à-dire la Nature.",
+    "work": "Ethica, IV, préface",
+    "date": "1677",
+    "image": "spinoza.webp",
+    "source_note": "Spinoza, Éthique, IV, préface ; œuvre posthume."
+  },
+  {
+    "id": 48,
+    "author": "Baruch Spinoza",
+    "latin": "Sed omnia praeclara tam difficilia quam rara sunt.",
+    "french": "Mais tout ce qui est remarquable est aussi difficile que rare.",
+    "work": "Ethica, V, 42, scolie",
+    "date": "1677",
+    "image": "spinoza.webp",
+    "source_note": "Spinoza, Éthique, V, proposition 42, scolie : dernière phrase de l’ouvrage."
+  },
+  {
+    "id": 49,
+    "author": "Isaac Newton",
+    "latin": "Hypotheses non fingo.",
+    "french": "Je ne forge pas d’hypothèses.",
+    "work": "Principia, Scholium Generale",
+    "date": "1713",
+    "image": "newton.webp",
+    "source_note": "Newton, Philosophiae Naturalis Principia Mathematica, 2e édition, Scholie général."
+  },
+  {
+    "id": 50,
+    "author": "Carl von Linné",
+    "latin": "Natura non facit saltus.",
+    "french": "La nature ne fait pas de sauts.",
+    "work": "Philosophia Botanica, § 77",
+    "date": "1751",
+    "image": "linnaeus.webp",
+    "source_note": "Linné, Philosophia Botanica, § 77."
+  }
+]
