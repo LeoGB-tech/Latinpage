@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Cinquante citations latines authentiques, une par écran.">
+<meta name="theme-color" content="#E6E1DA">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Citations Latines">
+<title>Citations Latines</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="preload" href="fonts/cormorant-garamond-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/eb-garamond-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/eb-garamond-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page">
+  <main class="card is-home" id="card" aria-roledescription="carrousel" aria-label="Citations latines">
+    <div class="track" id="track"></div>
+
+    <button class="zone zone-prev" id="prev" type="button" aria-label="Citation précédente"></button>
+    <button class="zone zone-next" id="next" type="button" aria-label="Citation suivante"></button>
+
+    <header class="head">Citations Latines</header>
+
+    <button class="icon-btn about-btn" id="aboutBtn" type="button" aria-label="À propos" aria-controls="about" aria-expanded="false">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.6v.01"/></svg>
+    </button>
+
+    <button class="icon-btn save-btn" id="saveBtn" type="button" aria-label="Enregistrer l’image de la citation" hidden>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19.5h14"/></svg>
+    </button>
+
+    <div class="progress" aria-hidden="true">
+      <div class="bar"><i id="barFill"></i></div>
+      <span class="count" id="count"></span>
+    </div>
+
+    <p class="toast" id="toast" role="status" aria-live="polite"></p>
+    <p class="sr-only" id="live" aria-live="polite"></p>
+
+    <section class="about" id="about" aria-labelledby="aboutTitle" hidden>
+      <div class="about-inner">
+        <h2 id="aboutTitle">À propos</h2>
+
+        <h3>Textes latins</h3>
+        <p>Chaque citation est accompagnée de sa référence précise&nbsp;: auteur, œuvre, livre, chapitre ou vers. Seules les attributions sûres ont été retenues&nbsp;; les paroles rapportées par un autre auteur, comme Suétone, sont signalées comme telles.</p>
+        <p>Ouvrages de référence&nbsp;: F. Gaffiot, <i>Dictionnaire latin-français</i>&nbsp;; éditions critiques de la Collection des Universités de France (Les Belles Lettres), de la Bibliotheca Teubneriana et de la Loeb Classical Library&nbsp;; textes du Perseus Digital Library.</p>
+
+        <h3>Traductions</h3>
+        <p>Traductions françaises réalisées pour le projet et relues, sans traduction automatique. Elles suivent un registre soutenu, fidèle au sens et au ton de l’original. Orthographe et typographie&nbsp;: <i>Dictionnaire de l’Académie française</i>.</p>
+
+        <h3>Illustrations</h3>
+        <p>Œuvres d’époque issues de Wikimedia Commons et des collections des musées.</p>
+        <ul class="credits" id="credits"></ul>
+
+        <h3>Licence</h3>
+        <p>Traductions et code publiés sous licence CC BY-SA 4.0. Les images créées avec le bouton d’enregistrement sont libres de partage sous la même licence. Les œuvres reproduites relèvent du domaine public.</p>
+
+        <button class="close" id="aboutClose" type="button">Fermer</button>
+      </div>
+    </section>
+  </main>
+</div>
+<script src="js/app.js" defer></script>
+</body>
+</html>

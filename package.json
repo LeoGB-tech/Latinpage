@@ -1,0 +1,13 @@
+{
+  "name": "citations-latines",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "images": "node tools/fetch-images.mjs",
+    "build": "node tools/build.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "sharp": "^0.34.0"
+  }
+}
