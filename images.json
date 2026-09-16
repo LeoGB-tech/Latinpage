@@ -1,0 +1,280 @@
+{
+  "_doc": "Sources des illustrations. Ordre d’essai : fichiers « commons » exacts, puis recherches « search » sur Wikimedia Commons, puis image principale de l’article Wikipédia « wiki ». « must » : le nom du fichier doit correspondre. « exclude » : œuvres modernes ou copies à écarter.",
+  "caesar.webp": {
+    "author": "Jules César",
+    "oeuvre": "Portrait dit de Tusculum (Turin, Museo di Antichità), ou portrait antique de César",
+    "search": [
+      "Tusculum portrait Caesar",
+      "Julius Caesar Tusculum bust Turin",
+      "Julius Caesar bust Vatican Museums Chiaramonti",
+      "Gaius Julius Caesar marble portrait museum"
+    ],
+    "wiki": "Julius Caesar",
+    "must": "caesar|cesare|césar|cäsar",
+    "exclude": "coustou|fori imperiali|bronze statue|napol|rimini|statue in|monument|cesena"
+  },
+  "cicero.webp": {
+    "author": "Cicéron",
+    "oeuvre": "Buste antique de Cicéron (Musées du Capitole)",
+    "commons": [
+      "M-T-Cicero.jpg"
+    ],
+    "search": [
+      "Cicero bust Capitoline Museums",
+      "Marcus Tullius Cicero bust Musei Capitolini",
+      "Cicero Apsley House bust",
+      "Cicero bust Uffizi"
+    ],
+    "wiki": "Cicero",
+    "must": "cicero|cicerone|cicéron",
+    "exclude": "palazzo di giustizia|palace of justice|thorvaldsen|maccari|statue in|monument|denounces"
+  },
+  "terence.webp": {
+    "author": "Térence",
+    "oeuvre": "Portrait de Térence du manuscrit Vaticanus Latinus 3868 (IXe siècle, d’après un modèle antique)",
+    "search": [
+      "Terence Vaticanus Latinus 3868 portrait",
+      "Terentius Vaticanus 3868",
+      "Terence portrait manuscript Vatican"
+    ],
+    "wiki": "Terence",
+    "must": "terence|terentius|terenz|térence|terenzio|3868",
+    "exclude": "statue|engraving|stich"
+  },
+  "virgil.webp": {
+    "author": "Virgile",
+    "oeuvre": "Mosaïque de Virgile entouré des Muses (musée du Bardo, Tunis)",
+    "search": [
+      "Virgil mosaic Bardo Museum",
+      "Vergil mosaic Bardo Clio Melpomene",
+      "Virgil Monnus mosaic Trier"
+    ],
+    "wiki": "Virgil",
+    "must": "virgil|vergil|virgile|virgilio|vergilius",
+    "exclude": "statue|mantua|mantova|engraving|dante"
+  },
+  "augustus.webp": {
+    "author": "Auguste",
+    "oeuvre": "Auguste de Prima Porta (musées du Vatican)",
+    "commons": [
+      "Statue-Augustus.jpg"
+    ],
+    "search": [
+      "Augustus of Prima Porta",
+      "Augustus Prima Porta Vatican Museums",
+      "Augustus Bevilacqua Glyptothek Munich"
+    ],
+    "wiki": "Augustus",
+    "must": "augustus|prima porta|octavian|bevilacqua",
+    "exclude": "via dei fori|bronze|cast|replica|copy|zaragoza|saragossa|rimini|arles"
+  },
+  "tiberius.webp": {
+    "author": "Tibère",
+    "oeuvre": "Portrait antique de Tibère",
+    "search": [
+      "Tiberius bust Glyptothek Munich",
+      "Tiberius bust Louvre",
+      "Tiberius portrait Ny Carlsberg Glyptotek"
+    ],
+    "wiki": "Tiberius",
+    "must": "tiberius|tibère|tiberio",
+    "exclude": "coin|aureus|denarius|cameo"
+  },
+  "caligula.webp": {
+    "author": "Caligula",
+    "oeuvre": "Portrait antique de Caligula",
+    "search": [
+      "Caligula Metropolitan Museum of Art marble",
+      "Caligula bust Ny Carlsberg Glyptotek",
+      "Caligula bust Louvre"
+    ],
+    "wiki": "Caligula",
+    "must": "caligula|gaius caesar",
+    "exclude": "coin|aureus|denarius|film"
+  },
+  "seneca.webp": {
+    "author": "Sénèque",
+    "oeuvre": "Double hermès de Socrate et Sénèque, inscrit (Antikensammlung, Berlin)",
+    "search": [
+      "Seneca Socrates double herm Berlin",
+      "Seneca herm Antikensammlung Berlin",
+      "Seneca Sokrates Doppelherme"
+    ],
+    "wiki": "Seneca the Younger",
+    "must": "seneca|sénèque|seneca",
+    "exclude": "pseudo|rubens|dying|death|mort|statue in|córdoba|cordoba"
+  },
+  "nero.webp": {
+    "author": "Néron",
+    "oeuvre": "Portrait antique de Néron (Glyptothek, Munich, ou Musées du Capitole)",
+    "commons": [
+      "Nero Glyptothek Munich 321.jpg"
+    ],
+    "search": [
+      "Nero Glyptothek Munich",
+      "Nero bust Capitoline Museums",
+      "Nero marble portrait museum"
+    ],
+    "wiki": "Nero",
+    "must": "nero|néron|nerone",
+    "exclude": "coin|aureus|denarius|film|siemiradzki|torches|statue in"
+  },
+  "vespasian.webp": {
+    "author": "Vespasien",
+    "oeuvre": "Portrait antique de Vespasien (Ny Carlsberg Glyptotek, Copenhague)",
+    "search": [
+      "Vespasian Ny Carlsberg Glyptotek",
+      "Vespasian bust Louvre",
+      "Vespasian marble portrait Museo Nazionale Romano"
+    ],
+    "wiki": "Vespasian",
+    "must": "vespasian|vespasien|vespasiano",
+    "exclude": "coin|aureus|denarius|sestertius"
+  },
+  "trajan.webp": {
+    "author": "Trajan",
+    "oeuvre": "Portrait antique de Trajan (Glyptothek, Munich)",
+    "search": [
+      "Trajan Glyptothek Munich",
+      "Traianus Glyptothek Munich",
+      "Trajan bust Louvre"
+    ],
+    "wiki": "Trajan",
+    "must": "trajan|traianus|traiano",
+    "exclude": "coin|aureus|denarius|column|statue in|bronze statue"
+  },
+  "augustine.webp": {
+    "author": "Augustin d’Hippone",
+    "oeuvre": "Fresque du Latran (VIe siècle), plus ancien portrait connu d’Augustin",
+    "search": [
+      "Augustine of Hippo Lateran fresco",
+      "Saint Augustine oldest portrait Lateran",
+      "Augustinus Lateran fresco"
+    ],
+    "wiki": "Augustine of Hippo",
+    "must": "augustin|agostino|augustine",
+    "exclude": "botticelli|gozzoli|champaigne|caravaggio|monica|statue"
+  },
+  "erasmus.webp": {
+    "author": "Érasme",
+    "oeuvre": "Portrait d’Érasme par Hans Holbein le Jeune (1523, National Gallery, Londres)",
+    "commons": [
+      "Holbein-erasmus.jpg"
+    ],
+    "search": [
+      "Erasmus Holbein 1523 National Gallery",
+      "Hans Holbein Erasmus of Rotterdam portrait",
+      "Erasmus Holbein Louvre"
+    ],
+    "wiki": "Erasmus",
+    "must": "erasm",
+    "exclude": "statue|engraving|stamp|medal"
+  },
+  "luther.webp": {
+    "author": "Martin Luther",
+    "oeuvre": "Portrait de Luther par Lucas Cranach l’Ancien (1528-1529)",
+    "search": [
+      "Martin Luther Lucas Cranach 1529 portrait",
+      "Lucas Cranach Martin Luther 1528",
+      "Martin Luther Cranach Uffizi"
+    ],
+    "wiki": "Martin Luther",
+    "must": "luther",
+    "exclude": "katharina|bora|statue|monument|melanchthon|engraving|woodcut"
+  },
+  "copernicus.webp": {
+    "author": "Nicolas Copernic",
+    "oeuvre": "Portrait de Copernic de l’hôtel de ville de Toruń (vers 1580)",
+    "commons": [
+      "Nikolaus Kopernikus.jpg"
+    ],
+    "search": [
+      "Copernicus portrait Toruń town hall",
+      "Nicolaus Copernicus portrait Torun 1580",
+      "Mikołaj Kopernik portret Toruń"
+    ],
+    "wiki": "Nicolaus Copernicus",
+    "must": "coperni|kopernik|kopernikus",
+    "exclude": "statue|monument|matejko|stamp|banknote|conversation"
+  },
+  "bacon.webp": {
+    "author": "Francis Bacon",
+    "oeuvre": "Portrait de Francis Bacon par Paul van Somer (vers 1617)",
+    "commons": [
+      "Somer Francis Bacon.jpg"
+    ],
+    "search": [
+      "Francis Bacon Paul van Somer portrait",
+      "Francis Bacon portrait National Portrait Gallery"
+    ],
+    "wiki": "Francis Bacon",
+    "must": "bacon",
+    "exclude": "roger|painter|1909|1992|statue|engraving"
+  },
+  "descartes.webp": {
+    "author": "René Descartes",
+    "oeuvre": "Portrait de René Descartes d’après Frans Hals (vers 1649, Louvre)",
+    "commons": [
+      "Frans Hals - Portret van René Descartes.jpg"
+    ],
+    "search": [
+      "Frans Hals René Descartes portrait",
+      "Descartes Frans Hals Louvre"
+    ],
+    "wiki": "René Descartes",
+    "must": "descartes|cartesius",
+    "exclude": "statue|stamp|queen christina|dumesnil|engraving"
+  },
+  "hobbes.webp": {
+    "author": "Thomas Hobbes",
+    "oeuvre": "Portrait de Thomas Hobbes par John Michael Wright (vers 1669-1670, National Portrait Gallery)",
+    "commons": [
+      "Thomas Hobbes (portrait).jpg"
+    ],
+    "search": [
+      "Thomas Hobbes John Michael Wright portrait",
+      "Thomas Hobbes portrait National Portrait Gallery"
+    ],
+    "wiki": "Thomas Hobbes",
+    "must": "hobbes",
+    "exclude": "leviathan|frontispiece|engraving|statue"
+  },
+  "spinoza.webp": {
+    "author": "Baruch Spinoza",
+    "oeuvre": "Portrait de Spinoza (vers 1665, Herzog August Bibliothek, Wolfenbüttel)",
+    "search": [
+      "Spinoza portrait 1665 Herzog August Bibliothek",
+      "Baruch de Spinoza portrait Wolfenbüttel",
+      "Benedictus de Spinoza portrait painting"
+    ],
+    "wiki": "Baruch Spinoza",
+    "must": "spinoza",
+    "exclude": "statue|monument|stamp|banknote|hirszenberg|excommunicat"
+  },
+  "newton.webp": {
+    "author": "Isaac Newton",
+    "oeuvre": "Portrait d’Isaac Newton par Godfrey Kneller (1689)",
+    "commons": [
+      "GodfreyKneller-IsaacNewton-1689.jpg"
+    ],
+    "search": [
+      "Godfrey Kneller Isaac Newton 1689",
+      "Isaac Newton Kneller portrait"
+    ],
+    "wiki": "Isaac Newton",
+    "must": "newton",
+    "exclude": "blake|statue|paolozzi|apple|stamp|banknote|1702|1720"
+  },
+  "linnaeus.webp": {
+    "author": "Carl von Linné",
+    "oeuvre": "Portrait de Carl von Linné par Alexander Roslin (1775, Nationalmuseum, Stockholm)",
+    "search": [
+      "Carl von Linné Alexander Roslin 1775",
+      "Carl Linnaeus Roslin portrait",
+      "Linnaeus portrait Nationalmuseum Stockholm"
+    ],
+    "wiki": "Carl Linnaeus",
+    "must": "linn",
+    "exclude": "lapland|statue|stamp|banknote|monument|sami"
+  }
+}
